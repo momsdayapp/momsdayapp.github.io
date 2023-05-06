@@ -1,0 +1,445 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: radial-gradient(circle at center, #F7ECEC 20%, #eed4cc 60%, #bda99f 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    background-image: url('path/to/your/floral-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  .app-header {
+    background-color: #E96A6A;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    position: relative;
+  }
+  .app-header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .app-header::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(to top, #E96A6A, rgba(233, 106, 106, 0));
+    z-index: -1;
+  }
+  
+  
+  
+  .welcome-section {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .daily-quote {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+  
+  .quote-author {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .photo-preview {
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .album-container {
+    position: relative;
+  }
+  
+  .album-image {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 106, 106, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .album-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .view-album {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #E96A6A;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .view-album:hover {
+    color: #C54646;
+    background-color: #f9f9f9;
+  }
+  
+  .navigation-menu {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .navigation-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .navigation-menu a {
+    text-decoration: none;
+    color: #E96A6A;
+    font-weight: bold;
+  }
+  
+  .navigation-menu a:hover {
+    color: #C54646;
+  }
+  
+
+  .floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: 100%;
+    font-size: 2rem;
+    animation: float linear infinite;
+    color: #E96A6A;
+    opacity: 0.5;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100%) rotate(0deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-100%) rotate(720deg);
+      opacity: 0;
+    }
+  
+  }
+  
+
+  .photo-and-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .cursor-heart {
+    position: absolute;
+    font-size: 1rem;
+    color: #E96A6A;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+    transition: all 0.1s ease-out;
+  }
+  
+  .cursor-heart::before {
+    content: "❤️";
+  }
+
+  .floating-leaves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .floating-leaves .fa-leaf {
+    position: absolute;
+    opacity: 0.5;
+    color: #83c786;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .leaf1 {
+    left: 10%;
+    font-size: 2rem;
+    animation-name: leaf1-float;
+  }
+  
+  .leaf2 {
+    left: 50%;
+    font-size: 1.5rem;
+    animation-name: leaf2-float;
+  }
+  
+  .leaf3 {
+    left: 80%;
+    font-size: 3rem;
+    animation-name: leaf3-float;
+  }
+  
+  @keyframes leaf1-float {
+    0% { top: -20%; }
+    100% { top: 120%; }
+  }
+  
+  @keyframes leaf2-float {
+    0% { top: -50%; }
+    100% { top: 150%; }
+  }
+  
+  @keyframes leaf3-float {
+    0% { top: -10%; }
+    100% { top: 110%; }
+  }
+  
+  .leaf4 {
+    left: 25%;
+    font-size: 2.5rem;
+    animation-name: leaf4-float;
+  }
+  
+  .leaf5 {
+    left: 70%;
+    font-size: 1.8rem;
+    animation-name: leaf5-float;
+  }
+  
+  .leaf6 {
+    left: 90%;
+    font-size: 3.2rem;
+    animation-name: leaf6-float;
+  }
+  
+  @keyframes leaf4-float {
+    0% { top: -30%; }
+    100% { top: 130%; }
+  }
+  
+  @keyframes leaf5-float {
+    0% { top: -40%; }
+    100% { top: 140%; }
+  }
+  
+  @keyframes leaf6-float {
+    0% { top: -60%; }
+    100% { top: 160%; }
+  }
+  
+
+  .floating-petals {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .floating-petals .heart {
+    position: absolute;
+    opacity: 0.4;
+    width: 30px;
+    fill: #dd6e93;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .petal1 {
+    left: 15%;
+    animation-name: petal1-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal1-float {
+    0% { top: -20%; }
+    100% { top: 120%; }
+  }
+  .petal2 {
+    left: 25%;
+    animation-name: petal2-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal2-float {
+    0% { top: -50%; }
+    100% { top: 150%; }
+  }
+  .petal3 {
+    left: 35%;
+    animation-name: petal3-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal3-float {
+    0% { top: -10%; }
+    100% { top: 110%; }
+  }
+  .petal4 {
+    left: 55%;
+    animation-name: petal4-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal4-float {
+    0% { top: -30%; }
+    100% { top: 130%; }
+  }
+  .petal5 {
+    left: 65%;
+    animation-name: petal5-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal5-float {
+    0% { top: -60%; }
+    100% { top: 160%; }
+  }
+  
+  @keyframes petal4-float {
+    0% { top: -30%; }
+    100% { top: 130%; }
+  }
+
+  .petal6 {
+    left: 95%;
+    animation-name: petal6-float;
+  }
+  
+  /* Add more heart styles */
+  /* ... */
+  
+  @keyframes petal6-float {
+    0% { top: -70%; }
+    100% { top: 170%; }
+  }
+  /* Add more keyframes */
+  /* ... */
+  
+
+  .photo {
+    margin-top: 10%;
+    width: 500px; /* Set the width to your desired size */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Crop the image to fit the container */
+    display: block;
+  }
+  .quote-text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    /* Add any other styles you'd like for the quote text */
+  }
+  
+
+  /* Phone */
+
+  @media only screen and (max-width: 480px) {
+    .app-header {
+      font-size: 1rem;
+    }
+  
+
+      
+      .photo-container {
+        flex: 1;
+        display: flex;
+        align-items: flex-end; /* Align the image towards the bottom of the container */
+      }
+    .photo-container,
+    .quote-container {
+      width: 100%;
+    }
+    .photo-container {
+        display: flex;
+        justify-content: center; /* Add this line to center the image horizontally */
+        align-items: center; /* Add this line to center the image vertically */
+        max-height: 50vh;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      
+    /* Adjust the photo size */
+    .photo {
+      max-width: 80%;
+      margin-top: 40%;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Center the image */
+    }
+  
+    /* Adjust the quote and author styles */
+    .quote-text {
+      font-size: 1.2rem; /* Make the quote font size smaller */
+    }
+  
+    .quote-author {
+      font-size: 1rem; /* Make the author font size smaller */
+      text-align: right; /* Align the author to the right */
+      margin-right: 10%; /* Add some margin to the right */
+    }
+  }
+  
+  
