@@ -25,6 +25,11 @@ document.addEventListener('mousemove', (event) => {
   cursorHeart.style.top = event.pageY + 'px';
 });
 
+document.addEventListener('touchmove', (event) => {
+  cursorHeart.style.left = event.touches[0].pageX + 'px';
+  cursorHeart.style.top = event.touches[0].pageY + 'px';
+});
+
 // Random Photo and Quote
 
 async function fetchRandomPhoto() {
