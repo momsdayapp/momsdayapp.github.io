@@ -33,7 +33,7 @@ document.addEventListener('touchmove', (event) => {
 // Random Photo and Quote
 
 async function fetchRandomPhoto() {
-  const response = await fetch('photos.json');
+  const response = await fetch('photos2.json');
   const photos = await response.json();
   const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
   return randomPhoto;
