@@ -24,10 +24,20 @@ document.addEventListener('mousemove', (event) => {
   cursorHeart.style.left = event.pageX + 'px';
   cursorHeart.style.top = event.pageY + 'px';
 });
-
 document.addEventListener('touchmove', (event) => {
   cursorHeart.style.left = event.touches[0].pageX + 'px';
   cursorHeart.style.top = event.touches[0].pageY + 'px';
+});
+
+// spin wheel
+
+  // JavaScript to handle button click
+document.getElementById('show-qr-btn').addEventListener('click', function() {
+  document.getElementById('qr-modal').style.display = 'flex';
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('qr-modal').style.display = 'none';
 });
 
 // Random Photo and Quote
